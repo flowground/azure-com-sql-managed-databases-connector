@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "locationName": {
+            "required": true,
+            "type": "string"
+        },
+        "operationId": {
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+        },
+        "subscriptionId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Contains the information necessary to perform a complete database restore operation.",
+            "properties": {
+                "lastBackupName": {
+                    "description": "The last backup name to apply",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "lastBackupName"
+            ],
+            "type": "object"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
